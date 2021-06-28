@@ -1,0 +1,210 @@
+.headBanner{
+    max-height:870px;
+    height:128vw;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    img {
+      display: block;
+      position:absolute;
+      width:120%;
+      min-width:800px;
+      min-height:480px;
+      margin:-10% -10% 0 -10%;
+      @include s_style{
+          width:200%;
+      }
+    }
+    .container{
+        .JBTcard{
+            color: #FFFFFF;
+            width:445px;
+            font-size: 24px;
+            z-index:1;
+            h3{
+                font-size: 40px;
+            }
+            .button{
+                font-size: 20px;
+                margin:16px 0;
+                max-width: 350px;
+                border-color: #fff;
+            }
+        }
+    }
+}
+.newItem{
+    font-size: 16px;
+    ul{
+        :nth-child(odd){
+            flex-direction: row-reverse;
+            @include s_style{
+                flex-direction: row;
+            }
+        }
+        li{
+            display: flex;
+            align-items: center;
+            @include s_style {
+                flex-wrap: wrap;
+            }
+            .imgBox{
+                width: 50%;
+                @include s_style {
+                    width:100%
+                }
+            }
+            .endBox{
+                &::before{
+                    padding-top: 196.3%;
+                    a{
+                        color:$main-color;
+                    }
+                }
+                a{
+                    color:#000;
+                }
+            }
+            .card{
+                width:50%;
+                padding:0 9%;
+                margin-bottom: 40px;
+                @include s_style{
+                    width: 100%;
+                }
+                h3{
+                    padding-top: 8px;
+                }
+                a{
+                    color:$main-color;
+                    text-align: left;
+                    @include s_style{
+                        padding: 6px 0;
+                        margin: 0;
+                    }
+                }
+                .button{
+                    font-size: 20px;
+                    color:inherit;
+                    text-align: center;
+                }
+            }
+            @include s_style {
+                .card{
+                    width: 100%;
+                }
+            }
+        }
+    }
+
+}
+.starItem{
+    padding: 40px 0;
+    font-size: 16px;
+    @include s_style{
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .card{
+        max-width:350px;
+        width:31%;
+        margin:32px auto;
+        @include imgBox-ratio(154%);
+        @include s_style{
+            width:100%;
+        }    
+        .price{
+            margin-top: 16px;
+            @include s_style{
+                margin-top: 4px;
+            }
+        }
+        .darker{
+            width:100%;
+            height: 100%;
+            position: absolute;
+            background-color: #66666699;
+            z-index: 1;
+        }
+    }
+}
+.dayItem{
+    display: flex;
+    @include s_style{
+        flex-wrap: wrap;
+    }
+    .imgBox{
+        max-width: 730px;
+        height: 520px;
+        @include imgBox-ratio(0%);
+        @include s_style{
+            width:100%;
+        }
+    }
+    .card{
+        width:350px;
+        margin-left: 30px;
+        font-size: 16px;
+        @include s_style{
+            margin-left: 0;
+            width: 100%;
+        }
+        h4{
+            font-size: 1.25em;
+        }
+        a{
+            text-align: left;
+            color:$main-color;
+        }
+        
+    }
+}
+.footerBanner{
+    margin-bottom: 0;
+    @include imgBox-ratio(0);
+    height: 600px;
+    img{
+        height:400%    }
+    .container{
+        position: relative;
+        height: 100%;
+        @include s_style{
+            display: flex;
+            justify-content: center;
+        }
+        .subscription{
+            position: absolute;
+            bottom: 112px;
+            p{
+                font-size:32px;
+                line-height: 1.5;
+                color:#8D8D8D;
+                font-weight: bolder;
+                margin-bottom: 20px;
+            }
+            .input{
+                max-width: 350px;
+                height: 60px;
+                border: 4px solid $main-color;
+                border-radius: 8px;
+                input{
+                    width:100%;
+                    height: 52px;
+                    border: none;
+                }
+                a{
+                    // @include a_block;
+                    display: block;
+                    text-decoration: none;
+                    font-size: 16px;
+                    width:131px;
+                    line-height: 54px;
+                    text-align: center;
+                    color:#FFFFFF;
+                    background-color: $main-color;
+                }
+            }
+        }
+    }
+    
+}

@@ -1,0 +1,66 @@
+
+.card{
+    color: #000;    
+    font-family: "蘋方-繁,SF Pro Text";
+    line-height: 1.5;
+    h3{
+        font-weight: bolder;
+        font-size: 1.5em;
+        // line-height: 1.5;
+    }
+    p{
+        // line-height: 1.5;
+    }
+    a{
+        @include a_block;
+        padding:1em 0;
+        margin: 1em auto;
+        color:$a-color;
+        @include s_style{
+            margin:0;
+        }
+    }
+    .price{
+        span{
+            text-decoration: line-through;
+            color:#8D8D8D;
+        }
+    }
+}
+.button{
+    padding-top: 1em;
+    padding-bottom: 1em;
+    border: 2px solid #000;
+    border-radius: 1.5em;
+}
+.imgBox {
+    position: relative;
+    overflow: hidden;
+    width:100%;
+    &:before{
+        content: "";
+        display: block;
+        padding-top: 100%;
+    }
+    img{
+        position: absolute;
+        /* 需在html補充.wImg/vImg */
+    }
+    .wImg{
+        height: 100%;
+    }
+    .vImg{
+        width: 100%;
+    }
+}
+.modal{
+    position: fixed;
+    width:100vw;
+    height: 100vh;
+    background-color: $modal-color;
+    z-index:10;
+    display: none;
+}
+.a_block{
+    @include a_block;
+}

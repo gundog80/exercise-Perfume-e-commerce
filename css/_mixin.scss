@@ -1,0 +1,22 @@
+@mixin s_style{
+    @media (max-width : $mobalPoint){
+        @content;
+    }
+}
+@mixin a_block {
+    display: block;
+    text-align:center;
+    text-decoration: none;
+    padding:1em;
+    color:inherit;
+    @include s_style{
+        padding:0.5em;
+    }
+}
+@mixin imgBox-ratio($ratio){
+    .imgBox{
+        &:before{
+            padding-top: $ratio;
+        }
+    }
+}

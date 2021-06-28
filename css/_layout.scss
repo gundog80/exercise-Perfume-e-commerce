@@ -1,0 +1,112 @@
+.navModal{
+    // display:block;  //測試用
+    align-items: stretch;
+    font-size: 40px;
+        ul{
+            padding:5px;
+            padding-top: 50px;
+            a{
+                background: $main-color;
+                margin:3px;
+            }
+        }
+}
+.header{
+    margin:0 auto;
+    font-size: 20px;
+    text-align: 20px;
+    a{
+        color: $modal-color;
+        background-color: #fff;
+        padding: 16px;
+        &:hover{
+            color: $main-color;
+            background-color: $modal-color;
+        }
+    }
+    .logo{
+        // display: flex;
+        // justify-content: center;
+        // align-items: center;
+        img{
+            max-width: 128px;
+        }
+    }
+
+    .dp_nav{
+        ul{
+            display: flex;
+        }
+        // @media (max-width:500px) {
+        @include s_style {
+            display: none;
+        }
+    }
+    .mob_nav{
+        display: none;
+        // display: flex;
+        // justify-content: end;
+        // align-items: center;
+   
+        // @include p_mobal{
+        @include s_style{
+            display: flex;
+        }
+        .shoping-cart{
+            .cart-gp{
+                position: relative;
+                span{
+                    position: absolute;
+                    width: 16px;
+                    font-size: 12px;
+                    line-height: 13px;
+                    text-align: center;
+                    right: -8px;
+                    top: -4px;
+                    color: $bg-color;
+                    background-color: $main-color;
+                    border-radius: 50%;
+                    z-index: 1;
+                }
+
+            }
+
+        }
+        .navBut{
+            width:72px;
+            height: 56px;
+            i{
+                font-size: 40px;
+            }
+        }
+    }
+}
+.footer{
+    // margin: 0;
+    background-color: $main-color;
+    line-height:80px;
+    font-size: 20px;
+    color:#fff;
+    .container{
+        margin:0 auto;
+        @include s_style{
+            justify-content: center;
+        }
+    }
+    p{
+        font-size: 14px;
+    }
+    .footernav{
+        a{
+            @include a_block;
+            padding:0 18px;
+            &:hover{
+                background-color: $bg-color;
+            }
+        }
+        @include s_style{
+            color:red;
+            display: none;
+        }
+    }
+}

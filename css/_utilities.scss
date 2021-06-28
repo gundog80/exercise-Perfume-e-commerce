@@ -1,0 +1,41 @@
+/*   container設定 只對一般狀態使用  */
+
+.c_box{
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+}
+.l_box{
+    justify-content: flex-start;
+}
+.r_box{
+    justify-content: flex-end;
+}
+.t_box{
+    align-items:flex-start;
+}
+.b_box{
+    align-items:flex-end;
+}
+.bt_box{
+    justify-content:space-between;
+}
+.ar_box{
+    justify-content:space-around;
+}
+
+/* 尺寸 網格系統 */
+.w-50{
+    width:50%;
+}
+.w-100{
+    width:100%;
+}
+
+.dpn{
+    display: none;
+}
+.dpf{
+    display: flex;
+}
+
